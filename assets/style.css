@@ -1,0 +1,39 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+header {
+    background-color: darkslategrey;
+}
+
+main {
+    align-content:stretch;
+    background-color:lightslategrey;
+    margin: 0;
+    padding:15px;
+}
+
+aside,
+section {
+    background-color:rgb(191, 197, 204);
+    border: black solid 2px;
+}
+
+.container {
+    width: 100vw;
+}
+
+button {
+    padding: 0px 3px;
+    text-align: center;
+}
+
+button i {
+    /* font-size: 15px; */
+}
