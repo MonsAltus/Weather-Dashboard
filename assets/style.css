@@ -8,6 +8,10 @@ h1 {
     color: white;
     padding: 15px;
 }
+
+h2 {
+    font-size: 1.5rem;
+}
 header {
     background-color: darkslategrey;
 }
