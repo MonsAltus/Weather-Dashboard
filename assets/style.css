@@ -4,33 +4,35 @@
 
 h1 {
     font-size: 2.5rem;
+}
+
+h2 {
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.43rem;
+}
+
+header {
+    background-color: darkslategrey;
     text-align: center;
     color: white;
     padding: 15px;
 }
 
-h2 {
-    font-size: 1.5rem;
-}
-header {
-    background-color: darkslategrey;
-}
-
 main {
-    align-content:stretch;
-    background-color:lightslategrey;
-    margin: 0;
-    padding:15px;
-}
-
-aside,
-section {
+    /* align-content:stretch; */
     background-color:rgb(191, 197, 204);
-    border: black solid 2px;
+    margin: 0;
+    padding:40px;
+    border: 2px solid black;
 }
 
-.container {
-    width: 100vw;
+section {
+    background-color: whitesmoke;
+    border: black solid 2px;
 }
 
 button {
@@ -40,4 +42,27 @@ button {
 
 button i {
     /* font-size: 15px; */
+}
+
+.future-block {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top:20px;
+    margin-left: 3%;
+    /* min-height: 150px; */
+}
+
+.low-uv {
+    background-color: lightgreen;
+    padding: 2px;
+}
+
+.mid-uv {
+    background-color: yellow;
+    padding: 2px;
+}
+
+.high-uv {
+    background-color:palevioletred; 
+    padding: 2px;
 }
