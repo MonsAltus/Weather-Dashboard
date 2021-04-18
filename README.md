@@ -3,7 +3,6 @@
 
 ### Description:
 This page is designed to be a simple weather dashboard.
-There is a search form to enter your city.
 Upon entering a city into the search form the page will display current weather conditions on the right, and five-day forcast with summarized weather data below.
 
 ### Acceptance criteria:

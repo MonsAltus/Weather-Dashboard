@@ -5,11 +5,11 @@ apiKey = "f9f66e4d8cd2e7c1f9cea3662563d53e"
 
 citySearch.addEventListener("click", getWeather);
 
-// Gets lat-lon data from Geocoding API for use in One Call API.
+// Returns weather data.
 function getWeather(event) {
-    // debugger;
     event.preventDefault();
     var cityInputValue = cityInput.value;
+    // Gets lat-lon data from Geocoding API for use in One Call API.
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + cityInputValue + "&limit=1&appid=" + apiKey).then(function(response) {
         return response.json().then(function(latLonData) {
             var lat = latLonData[0].lat
@@ -27,9 +27,8 @@ function getWeather(event) {
     });
 };
 
+// Display current weather data.
 function renderWeather (weatherData, cityName, stateName) {
-    // Display current weather data.
-    // debugger;
     $("#current-weather").text(cityName +", " + stateName + " - " + (moment.unix(weatherData.current.dt).format("M/DD")))
     var currentIcon = weatherData.current.weather[0].icon;
     $("#current-icon").attr("src", "https://openweathermap.org/img/w/" + currentIcon + ".png");
@@ -37,7 +36,7 @@ function renderWeather (weatherData, cityName, stateName) {
     $("#current-humidity").text("Humidity: " + (Math.round(weatherData.current.humidity)) + "%")
     $("#wind-speed").text("Wind Speed: " + (Math.round(weatherData.current.wind_speed)) + " Mph")
     $("#uv-index").text("UV Index: "+(Math.round(weatherData.current.uvi)))
-    // Styles UV index background color based on index value
+    // Styles UV index background color based on index value.
     if (weatherData.current.uvi < 4) {
         $("#uv-index").addClass("low-uv").removeClass("mid-uv high-uv");
     } else if (weatherData.current.uvi < 7) {
@@ -57,11 +56,5 @@ function renderWeather (weatherData, cityName, stateName) {
 
 
 
-
 // localStorage.setItem(cityInputValue, weatherData)
 //When a search history item is clicked, either run getWeather using value, or pull from local storage and parse into weatherData.
-
-// Math.round()  to round temps or other variables
-// &exclude={part}
-// Use onecall API for UV index.
-// Geocoding API for lat-long
